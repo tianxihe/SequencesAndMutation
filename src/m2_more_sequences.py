@@ -186,9 +186,15 @@ def index_of_largest_number(numbers, n):
 
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    k_1=0
+    for k in range(n):
+        if numbers[k]>numbers[k_1]:
+            k_1=k
+    return k_1
+
 
 
 # ----------------------------------------------------------------------
@@ -241,9 +247,16 @@ def number_of_stutters(s):
        :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    num=0
+    for k in range(len(s)):
+        if k<(len(s)-1):
+            if s[k]==s[k+1]:
+                num=num+1
+    return num
+
 
 
 def run_test_is_palindrome():
@@ -314,7 +327,7 @@ def is_palindrome(s):
       :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
@@ -323,6 +336,14 @@ def is_palindrome(s):
     #   above are particularly good examples to work by hand.
     ####################################################################
     # ------------------------------------------------------------------
+    str=''
+
+    for k in range((len(s)-1),-1,-1):
+            str=str+s[k]
+            if s==str:
+             return True
+    return False
+
 
 
 # ----------------------------------------------------------------------
@@ -381,9 +402,14 @@ def count_same(sequence1, sequence2):
       type: sequence2: tuple or list or string
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    a=0
+    for k in range(len(sequence1)):
+        if sequence1[k]==sequence2[k]:
+            a=a+1
+    return a
 
 
 # ----------------------------------------------------------------------
